@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Studio B&M | Architecture & Design Courses – AutoCAD, Revit, Lumion, Photoshop, SketchUp">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title>STUDIO B&M</title>
@@ -12,7 +13,7 @@
     }
     html {
       scroll-behavior: smooth;
-  }
+    }
     body {
       margin: 0;
       padding: 0;
@@ -30,6 +31,7 @@
     .container {
       width: 100%;
       padding: 20px;
+      max-width: 1400px;
     }
 
     .section {
@@ -186,7 +188,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
+      padding: 0 20px;
     }
 
     .card {
@@ -203,6 +206,7 @@
       animation: fadeInUp 1s ease forwards;
       opacity: 0;
       transition: transform 0.3s ease;
+      margin-bottom: 20px;
     }
 
     .card:hover {
@@ -227,17 +231,20 @@
     .card p {
       color: #555;
       line-height: 1.4;
+      margin-bottom: 15px;
     }
 
     .card button {
       margin-top: auto;
-      padding: 10px;
+      padding: 12px;
       background-color: rgb(148, 199, 240);
       border: none;
       border-radius: 8px;
       color: white;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
+      font-weight: bold;
     }
 
     .card button:hover {
@@ -266,8 +273,17 @@
         width: 100%;
       }
 
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+      }
+
       .card {
-        width: 100%;
+        max-width: 100%;
+        width: calc(100%);
+        margin: 0 auto 20px;
       }
 
       .hero-section img {
@@ -285,6 +301,30 @@
 
       .card img {
         height: 180px;
+      }
+      
+      .section-title {
+        font-size: 26px !important;
+        margin-top: 30px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 15px;
+      }
+      
+      .card h3 {
+        font-size: 18px;
+      }
+      
+      .card p {
+        font-size: 15px;
+      }
+      
+      .card button {
+        padding: 20px;
+        font-size: 15px;
       }
     }
 
@@ -327,7 +367,7 @@
     span{
       color: rgba(77, 77, 78, 0.884);
     }
-    body.hero-section .text-content span{
+    body.dark-mode .hero-section .text-content span {
       color: #fff;
     }
 
@@ -435,12 +475,23 @@
         width: 25px;
         height: auto;
       }
+      
+      .navbars {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .nav-section {
+        max-width: 100%;
+        margin: 15px 0;
+      }
     }
     @media (min-width: 1025px) {
-    .text-content h2 {
-      font-size: 60px;
+      .text-content h2 {
+        font-size: 60px;
+      }
     }
-}
   </style>
 </head>
 <body>
@@ -470,8 +521,6 @@
     </nav>
     <div class="section">
 
-
-
       <!-- Hero Section -->
       <div class="hero-section">
         <div class="text-content" style="width: 100%;">
@@ -484,11 +533,11 @@
     </div>
 
     <!-- Section Title -->
-    <h2  class="section-title"  data-aos="fade-up" style="text-align: center; font-size: 32px; margin-top: 60px;text-decoration: underline;">الدورات الخــاصة بنــا</h2>
+    <h2 class="section-title" data-aos="fade-up" style="text-align: center; font-size: 32px; margin-top: 60px;text-decoration: underline;">الدورات الخــاصة بنــا</h2>
 
     <!-- Card Section -->
     <div class="section card-section" data-aos="fade-up">
-      <div class="cards" style="padding: 50px 50px;" data-aos="fade-up">
+      <div class="cards" data-aos="fade-up">
         <!-- Repeat card structure for each offer -->
         <div class="card" data-aos="fade-up">
           <img src="autocad.jpg" alt="Offer Image" >
@@ -530,16 +579,11 @@
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
         </div>
-        <!-- Add more cards as needed -->
-        
       </div>
+      
       <h2 class="section-title" data-aos="fade-up" style="text-align: center; font-size: 32px; margin-top: 60px;text-decoration: underline;">أعمــال اخـرى</h2>
 
-
-
-
-
-      <div class="cards" style="padding: 50px 50px;" data-aos="fade-up">
+      <div class="cards" data-aos="fade-up">
         <!-- Repeat card structure for each offer -->
         <div class="card" data-aos="fade-up">
           <img src="plan3d.jpg" alt="Offer Image">
@@ -567,7 +611,7 @@
         <div class="card">
           <img src="pnaffichage.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Panneau D'affichage</h3>
-          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم   pannéau d’affichage  وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق الأعمال بوضوح و بدقة عالية      وتقنيات عديدة حسب الاختيار</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم   pannéau d'affichage  وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق الأعمال بوضوح و بدقة عالية      وتقنيات عديدة حسب الاختيار</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
@@ -581,7 +625,6 @@
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
         </div>
-        <!-- Add more cards as needed -->
       </div>
     </div>
 
@@ -606,7 +649,7 @@
           <h3>برامجنا</h3>
           <ul>
             <li><a>AUTOCAD</a></li>
-            <li><a>REVIT</ض></li>
+            <li><a>REVIT</a></li>
             <li><a>SKETCHUP</a></li>
             <li><a>LUMION</a></li>
             <li><a>PHOTOSHOP</a></li>

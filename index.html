@@ -10,13 +10,14 @@
     * {
       box-sizing: border-box;
     }
-
-    body {
+    html {
       scroll-behavior: smooth;
+  }
+    body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: rgb(203, 229, 234);
+      background: #ffecdb;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,11 +33,11 @@
     }
 
     .section {
-      background-color: rgb(148, 199, 240);
+      background-color: #afddff;
       border-radius: 30px;
       margin: 2vh auto;
       width: 100%;
-      border: 5px solid rgba(63, 79, 222, 0.3);
+      border: 5px solid rgba(63, 79, 222, 0);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease-in-out;
     }
@@ -129,18 +130,22 @@
     }
 
     .hero-section {
-      display: flex;
+      width: 100%;
+      display: block;
+      text-align: center;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
       margin-top: 50px;
-      padding: 40px 20px;
     }
 
+    .hero-section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    } 
+
     .text-content {
-      max-width: 600px;
-      flex: 1;
+      width: 100%;
     }
     @media (max-width: 480px) {
     .text-content h2 {
@@ -305,7 +310,11 @@
 
     body.dark-mode .section {
       background-color: #2d2d2d;
-      border-color: rgba(108, 185, 245, 0.2);
+      border-radius: 30px;
+      margin: 2vh auto;
+      width: 100%;
+      border: 5px solid rgba(63, 79, 222, 0);
+      border-color: rgba(108, 186, 245, 0);
     }
 
     body.dark-mode .navbar {
@@ -313,6 +322,12 @@
     }
 
     body.dark-mode .navbar a {
+      color: #fff;
+    }
+    span{
+      color: rgba(77, 77, 78, 0.884);
+    }
+    body.hero-section .text-content span{
       color: #fff;
     }
 
@@ -459,12 +474,12 @@
 
       <!-- Hero Section -->
       <div class="hero-section">
-        <div class="text-content" >
-          <h2> <span style="color: blue;">Welcome</span> To <br> S T U D I O _ B & M <br> website</h2>
+        <div class="text-content" style="width: 100%;">
+          <h2>Welcome <span>To S T U D I O _ B & M </span>Website</h2>
           <br><br><br>
-          <p style="font-size: 22px;" dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;"> - مرحبا بك في Studio B & M - وجهتك النهائية عبر الإنترنت للأدوات والمواد والمنتجات المنسقة المتميزة المصممة خصيصا للمهندسين المعماريين ومحترفي التصميم. سواء كنت مهندسا معماريا متمرسا أو طالبا أو متحمسا للتصميم ، يقدم متجرنا مجموعة واسعة من العناصر عالية الجودة لدعم عمليتك الإبداعية.</p>
+          <p style="font-size: 22px;" dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;"> - مرحبا بك في Studio B & M - وجهتك النهائية عبر الإنترنت للأدوات والمواد والمنتجات المنسقة المتميزة المصممة خصيصا للمهندسين المعماريين ومحترفي التصميم. <br> سواء كنت مهندسا معماريا متمرسا أو طالبا أو متحمسا للتصميم<br> ، يقدم متجرنا مجموعة واسعة من العناصر عالية الجودة لدعم عمليتك الإبداعية.</p>
         </div>
-        <img src="archi.jpg" alt="Architect Image" style="width: 1200px;height: 450px;margin: auto auto;"/>
+        <img src="hero.png" alt="Architect Image"/>
       </div>
     </div>
 
@@ -529,7 +544,7 @@
         <div class="card" data-aos="fade-up">
           <img src="plan3d.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Realisation 3D</h3>
-          <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Luxury residence with clean lines and natural elements.</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم مشاريع 3d  واقعية جدًا وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق النماذج بأي مقياس مرغوب فيه  وتقنيات عديدة حسب الاختيار</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
@@ -537,7 +552,7 @@
         <div class="card">
           <img src="plan2d.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Plan 2D</h3>
-          <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Luxury residence with clean lines and natural elements.</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم مخطاطات 2d  واقعية جدًا وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق المخططات  بأي مقياس مرغوب فيه  وتقنيات عديدة حسب الاختيار</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
@@ -545,14 +560,14 @@
         <div class="card">
           <img src="r3d.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Rondu 3D + Video </h3>
-          <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Luxury residence with clean lines and natural elements.</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم مشاهد  3d و فيديوهات واقعية جدًا وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق المشاهد والصور والفيديوهات     وتقنيات عديدة حسب الاختيار</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
         </div>
         <div class="card">
           <img src="pnaffichage.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Panneau D'affichage</h3>
-          <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Luxury residence with clean lines and natural elements.</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم   pannéau d’affichage  وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق الأعمال بوضوح و بدقة عالية      وتقنيات عديدة حسب الاختيار</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
@@ -560,7 +575,8 @@
         <div class="card">
           <img src="rm.jpg" alt="Offer Image">
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Realisation du maquette</h3>
-          <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Luxury residence with clean lines and natural elements.</p>
+          <p dir="rtl" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">حصريًا عند STUDIO B&M نوفر لكم تصميم نماذج ومجسمات واقعية جدًا وفقًا لإختيارك وتوصياتك  إتقان في العمل وتسليم في وقت قياسي جدًا  كل هذا بأسعار لا تقبل المنافسة حيث يتميز عملنا ب : تحقيق النماذج بأي مقياس مرغوب فيه استخدام عدة مواد عالية الأداء وتقنيات عديدة حسب الاختيار قاعدة نموذجية وفقًا لإختيار العميل وميزانيته
+            .</p>
           <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 23px;">Prix Resonable</h3>
           <br>
           <a href="https://t.me/+igRynHVwxwg0OTM0" target="_blank"><button>Contact</button></a>
